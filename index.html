@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BOMOHSA — Bombas y Motores de Honduras S.A. Líderes desde 1974 en soluciones de bombeo, motores, generadores y equipos industriales en Honduras." />
+  <meta name="keywords" content="bombas Honduras, motores, generadores, BOMOHSA, bombeo industrial, agricultura, sistemas contra incendio" />
+  <meta name="author" content="BOMOHSA — Bombas y Motores de Honduras S.A." />
+  <title>BOMOHSA — El Poder de la Experiencia desde 1974</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       BOMOHSA — Sitio web corporativo industrial
+       El Poder de la Experiencia desde 1974
+       ============================================================ */
+
+    /* ---------- VARIABLES DE DISEÑO ---------- */
+    :root {
+      /* Paleta corporativa industrial */
+      --navy-900: #0a1f3d;          /* azul corporativo profundo */
+      --navy-800: #0f2a52;
+      --navy-700: #14366b;
+      --navy-600: #1d4a8f;
+      --blue-500: #2563eb;          /* azul corporativo principal */
+      --blue-400: #3b82f6;
+      --electric: #0ea5e9;          /* azul eléctrico industrial */
+      --orange: #f97316;            /* naranja industrial / acento */
+      --orange-dark: #ea580c;
+      --steel-900: #0f172a;
+      --steel-700: #334155;
+      --steel-500: #64748b;
+      --steel-300: #cbd5e1;
+      --steel-100: #f1f5f9;
+      --steel-50:  #f8fafc;
+      --white:     #ffffff;
+      --success:   #16a34a;
+      --warning:   #facc15;
+      --danger:    #dc2626;
+
+      /* Tipografía */
+      --font-display: 'Montserrat', sans-serif;
+      --font-body:    'Inter', sans-serif;
+
+      /* Sombras */
+      --shadow-sm:  0 1px 2px rgba(15, 23, 42, .06), 0 1px 3px rgba(15, 23, 42, .08);
+      --shadow-md:  0 4px 12px rgba(15, 23, 42, .08), 0 2px 6px rgba(15, 23, 42, .06);
+      --shadow-lg:  0 12px 32px rgba(15, 23, 42, .12), 0 6px 12px rgba(15, 23, 42, .08);
+      --shadow-xl:  0 24px 60px rgba(15, 23, 42, .18), 0 10px 20px rgba(15, 23, 42, .1);
+      --shadow-blue:0 10px 30px rgba(37, 99, 235, .25);
+
+      /* Radios */
+      --radius-sm: 8px;
+      --radius:    14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+
+      /* Transiciones */
+      --t-fast: .2s ease;
+      --t:      .35s cubic-bezier(.2, .8, .2, 1);
+      --t-slow: .6s cubic-bezier(.2, .8, .2, 1);
+    }
+
+    /* ---------- RESET / BASE ---------- */
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--steel-900);
+      background: var(--white);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      color: var(--navy-900);
+      letter-spacing: -.02em;
+      line-height: 1.15;
+    }
+    .display-title {
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      line-height: 1.05;
+      letter-spacing: -.03em;
+    }
+    .section { padding: 96px 0; position: relative; }
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(37, 99, 235, .1);
+      color: var(--blue-500);
+      font-weight: 600;
+      font-size: .8rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      margin-bottom: 12px;
+    }
+    .section-subtitle {
+      color: var(--steel-500);
+      max-width: 720px;
+      margin: 0 auto 48px;
+      font-size: 1.05rem;
+    }
+    a { color: var(--blue-500); text-decoration: none; transition: var(--t-fast); }
+    a:hover { color: var(--electric); }
+
+    /* ---------- BOTONES PERSONALIZADOS ---------- */
+    .btn {
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: .02em;
+      border-radius: var(--radius-sm);
+      padding: 12px 26px;
+      transition: var(--t);
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-primary-industrial {
+      background: linear-gradient(135deg, var(--blue-500) 0%, var(--navy-700) 100%);
+      color: var(--white);
+      box-shadow: var(--shadow-blue);
+    }
+    .btn-primary-industrial:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(37, 99, 235, .35);
+      color: var(--white);
+      background: linear-gradient(135deg, var(--electric) 0%, var(--blue-500) 100%);
+    }
+    .btn-accent {
+      background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+      color: var(--white);
+      box-shadow: 0 10px 30px rgba(249, 115, 22, .3);
+    }
+    .btn-accent:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(249, 115, 22, .4);
+      color: var(--white);
+    }
+    .btn-outline-industrial {
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, .9);
+      color: var(--white);
+    }
+    .btn-outline-industrial:hover {
+      background: var(--white);
+      color: var(--navy-900);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      background: var(--white);
+      color: var(--navy-700);
+      border: 1.5px solid var(--steel-300);
+    }
+    .btn-ghost:hover {
+      border-color: var(--blue-500);
+      color: var(--blue-500);
+      transform: translateY(-2px);
+    }
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: var(--white);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, .35);
+    }
+    .btn-whatsapp:hover { color: var(--white); transform: translateY(-2px); }
+
+    /* ---------- NAVBAR ---------- */
+    .navbar-industrial {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1040;
+      padding: 14px 0;
+      background: rgba(10, 31, 61, .92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      transition: var(--t);
+    }
+    .navbar-industrial.scrolled {
+      padding: 8px 0;
+      background: rgba(10, 31, 61, .98);
+      box-shadow: var(--shadow-lg);
+    }
+    .navbar-brand-industrial {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.4rem;
+      letter-spacing: -.01em;
+    }
+    .brand-logo {
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--electric) 0%, var(--blue-500) 50%, var(--orange) 100%);
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      font-size: 1.3rem;
+      box-shadow: 0 6px 18px rgba(14, 165, 233, .4);
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-logo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, .35), transparent 60%);
+    }
+    .brand-text small {
+      display: block;
+      font-family: var(--font-body);
+      font-size: .68rem;
+      font-weight: 400;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .65);
+      margin-top: -2px;
+    }
+    .navbar-industrial .nav-link {
+      color: rgba(255, 255, 255, .82) !important;
+      font-weight: 500;
+      font-size: .93rem;
+      padding: 8px 12px !important;
+      border-radius: 8px;
+      position: relative;
+      transition: var(--t-fast);
+    }
+    .navbar-industrial .nav-link:hover,
+    .navbar-industrial .nav-link.active {
+      color: var(--white) !important;
+      background: rgba(255, 255, 255, .08);
+    }
+    .navbar-industrial .nav-link.active::after {
+      content: '';
+      position: absolute;
+      left: 12px; right: 12px; bottom: 2px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--electric), var(--orange));
+      border-radius: 2px;
+    }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+      color: var(--white) !important;
+      padding: 8px 16px !important;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 4px 14px rgba(249, 115, 22, .35);
+    }
+    .nav-cta:hover { transform: translateY(-2px); background: var(--orange); }
+    .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--white);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: .9rem;
+      padding: 8px 14px;
+      border: 1px solid rgba(255, 255, 255, .15);
+      border-radius: 999px;
+      transition: var(--t-fast);
+    }
+    .nav-phone:hover {
+      color: var(--white);
+      background: rgba(14, 165, 233, .15);
+      border-color: var(--electric);
+    }
+    .navbar-toggler {
+      border: 1px solid rgba(255, 255, 255, .2);
+      padding: 6px 10px;
+    }
+    .navbar-toggler:focus { box-shadow: none; }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    .cart-badge {
+      position: absolute;
+      top: -4px; right: -6px;
+      background: var(--orange);
+      color: var(--white);
+      font-size: .65rem;
+      font-weight: 700;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--navy-900);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      padding: 140px 0 80px;
+      background:
+        linear-gradient(135deg, rgba(10, 31, 61, .96) 0%, rgba(20, 54, 107, .88) 50%, rgba(15, 23, 42, .94) 100%),
+        url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80') center/cover no-repeat;
+      color: var(--white);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(14, 165, 233, .15), transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(249, 115, 22, .12), transparent 50%);
+      pointer-events: none;
+    }
+    .hero-grid-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+      pointer-events: none;
+    }
+    .hero-particle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--electric), transparent 70%);
+      opacity: .6;
+      filter: blur(20px);
+      animation: float 8s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-30px) translateX(15px); }
+    }
+    .hero .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .15);
+      border-radius: 999px;
+      font-size: .8rem;
+      font-weight: 500;
+      backdrop-filter: blur(8px);
+    }
+    .hero-badge i { color: var(--electric); }
+    .hero h1 {
+      color: var(--white);
+      font-weight: 900;
+      font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+      letter-spacing: -.03em;
+      margin-bottom: 20px;
+    }
+    .hero h1 .accent {
+      background: linear-gradient(135deg, var(--electric) 0%, var(--orange) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero .lead {
+      color: rgba(255, 255, 255, .85);
+      font-size: clamp(1rem, 1.4vw, 1.18rem);
+      max-width: 620px;
+      margin-bottom: 32px;
+    }
+    .hero-cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 48px; }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255, 255, 255, .12);
+    }
+    .hero-stat .num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+    .hero-stat .lbl {
+      font-size: .82rem;
+      color: rgba(255, 255, 255, .65);
+      letter-spacing: .04em;
+      margin-top: 4px;
+    }
+
+    /* Cards de segmentos en hero */
+    .segments-row {
+      margin-top: 64px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .segment-card {
+      padding: 24px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: var(--radius);
+      backdrop-filter: blur(10px);
+      transition: var(--t);
+      cursor: pointer;
+    }
+    .segment-card:hover {
+      background: rgba(255, 255, 255, .1);
+      border-color: var(--electric);
+      transform: translateY(-6px);
+    }
+    .segment-card .ico {
+      width: 52px; height: 52px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--blue-500), var(--electric));
+      display: grid; place-items: center;
+      color: var(--white);
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+    }
+    .segment-card h5 { color: var(--white); font-size: 1.05rem; margin-bottom: 6px; }
+    .segment-card p { color: rgba(255, 255, 255, .7); font-size: .87rem; margin: 0; }
+
+    /* ---------- QUIÉNES SOMOS ---------- */
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .stat-card {
+      padding: 32px 24px;
+      background: var(--white);
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      border-top: 4px solid var(--blue-500);
+      transition: var(--t);
+    }
+    .stat-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); }
+    .stat-card .stat-num {
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: var(--navy-900);
+      line-height: 1;
+      background: linear-gradient(135deg, var(--blue-500), var(--electric));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-card .stat-lbl {
+      color: var(--steel-500);
+      font-size: .88rem;
+      margin-top: 8px;
+      letter-spacing: .02em;
+    }
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .pillar {
+      padding: 28px;
+      background: var(--steel-50);
+      border-radius: var(--radius);
+      border-left: 4px solid var(--blue-500);
+    }
+    .pillar i {
+      font-size: 1.6rem;
+      color: var(--blue-500);
+      margin-bottom: 12px;
+    }
+    .pillar h5 { margin-bottom: 8px; }
+    .pillar p { color: var(--steel-500); margin: 0; }
+    .values-pills {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px;
+    }
+    .values-pills span {
+      padding: 8px 16px;
+      background: var(--white);
+      border: 1.5px solid var(--steel-300);
+      border-radius: 999px;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--navy-700);
+      transition: var(--t-fast);
+    }
+    .values-pills span:hover {
+      border-color: var(--blue-500);
+      background: rgba(37, 99, 235, .06);
+      color: var(--blue-500);
+      transform: translateY(-2px);
+    }
+    .slogan-block {
+      margin-top: 56px;
+      padding: 48px;
+      background: linear-gradient(135deg, var(--navy-900), var(--navy-700));
+      border-radius: var(--radius-lg);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .slogan-block::before {
+      content: '';
+      position: absolute;
+      top: -50px; right: -50px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, var(--electric), transparent 70%);
+      opacity: .25;
+    }
+    .slogan-block::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 240px; height: 240px;
+      background: radial-gradient(circle, var(--orange), transparent 70%);
+      opacity: .2;
+    }
+    .slogan-block .quote-icon {
+      font-size: 2rem;
+      color: var(--electric);
+      margin-bottom: 16px;
+      position: relative; z-index: 1;
+    }
+    .slogan-block h3 {
+      color: var(--white);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-style: italic;
+      font-weight: 800;
+      margin: 0;
+      position: relative; z-index: 1;
+    }
+    .slogan-block p {
+      color: rgba(255, 255, 255, .7);
+      margin-top: 12px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      font-size: .85rem;
+      position: relative; z-index: 1;
+    }
+
+    /* ---------- SERVICIOS ---------- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      padding: 32px 28px;
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--steel-100);
+      box-shadow: var(--shadow-sm);
+      transition: var(--t);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue-500), var(--electric), var(--orange));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--t);
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-xl);
+      border-color: transparent;
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card:hover .service-ico {
+      background: linear-gradient(135deg, var(--blue-500), var(--electric));
+      color: var(--white);
+      transform: rotate(-6deg) scale(1.05);
+    }
+    .service-ico {
+      width: 64px; height: 64px;
+      border-radius: 16px;
+      background: rgba(37, 99, 235, .1);
+      color: var(--blue-500);
+      display: grid; place-items: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      transition: var(--t);
+    }
+    .service-card h5 { margin-bottom: 10px; font-size: 1.08rem; }
+    .service-card p { color: var(--steel-500); font-size: .92rem; margin: 0; }
+
+    /* ---------- MARCAS ALIADAS ---------- */
+    .brands-section { background: var(--white); padding: 80px 0; }
+    .brands-track-wrap {
+      overflow: hidden;
+      position: relative;
+      margin-top: 40px;
+      mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+    }
+    .brands-track {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+      animation: brandsScroll 35s linear infinite;
+      width: max-content;
+    }
+    @keyframes brandsScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .brand-pill {
+      flex-shrink: 0;
+      padding: 22px 30px;
+      background: var(--steel-50);
+      border-radius: var(--radius);
+      border: 1.5px solid var(--steel-100);
+      min-width: 200px;
+      text-align: center;
+      filter: grayscale(1);
+      opacity: .7;
+      transition: var(--t);
+      cursor: pointer;
+    }
+    .brand-pill:hover {
+      filter: grayscale(0);
+      opacity: 1;
+      border-color: var(--blue-500);
+      transform: translateY(-4px);
+      background: var(--white);
+      box-shadow: var(--shadow-md);
+    }
+    .brand-pill .b-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--navy-900);
+      letter-spacing: -.01em;
+    }
+    .brand-pill .b-sub {
+      font-size: .72rem;
+      color: var(--steel-500);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    /* ---------- CATÁLOGO ---------- */
+    .catalog-bg { background: linear-gradient(180deg, var(--steel-50) 0%, var(--white) 100%); }
+    .catalog-toolbar {
+      background: var(--white);
+      padding: 22px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      margin-bottom: 36px;
+      border: 1px solid var(--steel-100);
+    }
+    .search-input {
+      width: 100%;
+      padding: 12px 16px 12px 44px;
+      border: 1.5px solid var(--steel-300);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: .95rem;
+      transition: var(--t-fast);
+      background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cpath d='m21 21-4.3-4.3'%3E%3C/path%3E%3C/svg%3E") no-repeat 14px center;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: var(--blue-500);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, .12);
+    }
+    .filter-select {
+      padding: 11px 14px;
+      border: 1.5px solid var(--steel-300);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: .9rem;
+      background: var(--white);
+      width: 100%;
+      cursor: pointer;
+      transition: var(--t-fast);
+    }
+    .filter-select:focus { outline: none; border-color: var(--blue-500); }
+    .category-chips {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px;
+    }
+    .cat-chip {
+      padding: 8px 16px;
+      background: var(--white);
+      border: 1.5px solid var(--steel-300);
+      border-radius: 999px;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--steel-700);
+      cursor: pointer;
+      transition: var(--t-fast);
+    }
+    .cat-chip:hover { border-color: var(--blue-500); color: var(--blue-500); }
+    .cat-chip.active {
+      background: linear-gradient(135deg, var(--blue-500), var(--navy-700));
+      color: var(--white);
+      border-color: transparent;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--steel-100);
+      transition: var(--t);
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: transparent;
+    }
+    .product-img {
+      height: 200px;
+      background: linear-gradient(135deg, var(--steel-50), var(--steel-100));
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+    .product-img img {
+      width: 100%; height: 100%; object-fit: cover; transition: var(--t-slow);
+    }
+    .product-card:hover .product-img img { transform: scale(1.08); }
+    .product-stock {
+      position: absolute;
+      top: 12px; right: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+    .product-stock.in-stock { background: rgba(22, 163, 74, .15); color: var(--success); }
+    .product-stock.limited { background: rgba(220, 26, 26, .1); color: var(--danger); }
+    .product-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: .68rem;
+      font-weight: 700;
+      background: var(--orange);
+      color: var(--white);
+      box-shadow: var(--shadow-sm);
+    }
+    .product-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .product-brand {
+      font-size: .75rem; font-weight: 700; color: var(--blue-500);
+      text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px;
+    }
+    .product-name { font-size: 1.05rem; margin-bottom: 8px; line-height: 1.3; font-weight: 700; }
+    .product-desc { color: var(--steel-500); font-size: .88rem; margin-bottom: 16px; line-height: 1.5; }
+    .product-meta {
+      display: flex; gap: 14px; font-size: .78rem; color: var(--steel-700);
+      margin-bottom: 16px; padding: 10px 0; border-top: 1px dashed var(--steel-300); border-bottom: 1px dashed var(--steel-300);
+    }
+    .product-meta i { color: var(--blue-500); }
+    .product-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+    .product-price { font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; color: var(--navy-900); }
+    .product-actions { display: flex; gap: 6px; }
+    .product-actions .btn { padding: 8px 12px; border-radius: 6px; }
+
+    /* ---------- PANEL DE COTIZACIÓN (CARRITO FLOTANTE) ---------- */
+    .quote-panel {
+      position: fixed; top: 0; right: 0; bottom: 0; width: 400px;
+      background: var(--white); z-index: 1060; box-shadow: var(--shadow-xl);
+      transform: translateX(100%); transition: var(--t);
+      display: flex; flex-direction: column;
+    }
+    .quote-panel.open { transform: translateX(0); }
+    .quote-header {
+      background: var(--navy-900); color: var(--white); padding: 20px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .quote-header h5 { color: var(--white); margin: 0; font-size: 1.15rem; display: flex; align-items: center; gap: 10px; }
+    .quote-close { background: transparent; border: none; color: rgba(255,255,255,.7); font-size: 1.2rem; cursor: pointer; transition: var(--t-fast); }
+    .quote-close:hover { color: var(--white); }
+    .quote-body { padding: 20px; flex: 1; overflow-y: auto; }
+    .quote-empty { text-align: center; padding: 40px 20px; color: var(--steel-500); }
+    .quote-empty i { font-size: 3rem; color: var(--steel-300); margin-bottom: 14px; }
+    .quote-item { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--steel-100); align-items: center; }
+    .quote-item img { width: 50px; height: 50px; object-fit: cover; border-radius: 6px; background: var(--steel-50); }
+    .quote-item-info { flex: 1; }
+    .quote-item-brand { font-size: .68rem; font-weight: 700; color: var(--blue-500); text-transform: uppercase; }
+    .quote-item h6 { font-size: .9rem; margin: 2px 0 6px; line-height: 1.3; }
+    .quote-item-bottom { display: flex; justify-content: space-between; align-items: center; }
+    .qty-control { display: flex; align-items: center; border: 1.5px solid var(--steel-300); border-radius: 6px; overflow: hidden; }
+    .qty-control button { background: var(--steel-50); border: none; width: 26px; height: 26px; font-weight: 600; cursor: pointer; transition: var(--t-fast); }
+    .qty-control button:hover { background: var(--steel-300); }
+    .qty-control .qty-val { width: 32px; text-align: center; font-size: .85rem; font-weight: 700; }
+    .quote-item-price { font-family: var(--font-display); font-weight: 700; font-size: .95rem; color: var(--navy-900); }
+    .quote-footer { padding: 20px; background: var(--steel-50); border-top: 1px solid var(--steel-300); }
+    .quote-total-row { display: flex; justify-content: space-between; font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; margin-bottom: 16px; color: var(--navy-900); }
+    .quote-overlay { position: fixed; inset: 0; background: rgba(10, 31, 61, .4); backdrop-filter: blur(4px); z-index: 1050; display: none; }
+    .quote-overlay.open { display: block; }
+
+    /* ---------- CONTACTO Y INFO ---------- */
+    .contact-info-card {
+      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%);
+      color: var(--white); padding: 40px; border-radius: var(--radius-lg); height: 100%;
+      box-shadow: var(--shadow-lg); position: relative; overflow: hidden;
+    }
+    .contact-info-card h4 { color: var(--white); margin-bottom: 28px; }
+    .info-row { display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start; }
+    .info-row i { font-size: 1.4rem; color: var(--electric); margin-top: 4px; }
+    .info-row h6 { color: rgba(255,255,255,.7); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; }
+    .info-row p { font-size: 1rem; margin: 0; font-weight: 500; }
+
+    /* ---------- FLOATS ---------- */
+    .whatsapp-float {
+      position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: var(--white); border-radius: 50%; display: grid; place-items: center;
+      font-size: 1.8rem; box-shadow: 0 10px 25px rgba(37, 211, 102, .4); z-index: 1000;
+      transition: var(--t); text-decoration: none;
+    }
+    .whatsapp-float:hover { transform: scale(1.1) rotate(6deg); color: var(--white); }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-industrial">
+    <div class="container">
+      <a class="navbar-brand-industrial" href="#inicio">
+        <div class="brand-logo"><i class="fas fa-cog"></i></div>
+        <div class="brand-text">
+          BOMOHSA
+          <small>Desde 1974</small>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="nav-phone" href="tel:+5045566614">
+              <i class="fas fa-headset text-electric"></i> +504 556-6614
+            </a>
+          </li>
+          <li class="nav-item ms-lg-2 position-relative">
+            <button class="nav-link nav-cta px-3 mt-2 mt-lg-0 border-0 text-white" onclick="toggleQuotePanel()">
+              <i class="fas fa-file-invoice-dollar me-1"></i> Mi Cotización
+              <span class="cart-badge" id="cartBadge">0</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="inicio">
+    <div class="hero-grid-pattern"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center">
+        <div class="col-lg-7" data-aos="fade-right" data-aos-duration="800">
+          <div class="badge-row">
+            <span class="hero-badge"><i class="fas fa-award"></i> ISO 9001 desde 2009</span>
+            <span class="hero-badge"><i class="fas fa-clock"></i> +50 años de experiencia</span>
+          </div>
+          <h1>BOMOHSA<br><span class="accent">El Poder de la Experiencia</span></h1>
+          <p class="lead">Líderes en Honduras desde 1974 en soluciones de bombeo, motores, generadores y equipos industriales. Tecnología, innovación y respaldo profesional para hogares, industrias, comercios y agricultura.</p>
+          <div class="hero-cta-row">
+            <a href="#catalogo" class="btn btn-accent"><i class="fas fa-th-large"></i> Ver Catálogo</a>
+            <a href="https://wa.me/50497223433?text=Hola%2C%20quisiera%20solicitar%20una%20cotizaci%C3%B3n%20de%20equipos%20BOMOHSA" target="_blank" rel="noopener" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section catalog-bg" id="catalogo">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-tag"><i class="fas fa-th"></i> Catálogo Digital</span>
+        <h2 class="section-title">Catálogo completo de equipos industriales</h2>
+        <p class="section-subtitle">Explora nuestra línea completa de bombas, motores, generadores y equipos industriales. Filtra por categoría y agrega productos a tu cotización.</p>
+      </div>
+
+      <div class="catalog-toolbar" data-aos="fade-up">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <input type="text" id="searchInput" class="search-input" placeholder="Buscar por nombre, marca o modelo…" />
+          </div>
+          <div class="col-md-3">
+            <select class="filter-select" id="brandFilter">
+              <option value="">Todas las marcas</option>
+              <option value="GOULDS">GOULDS</option>
+              <option value="PEARL">PEARL</option>
+              <option value="FRANKLIN ELECTRIC">FRANKLIN ELECTRIC</option>
+              <option value="PEDROLLO">PEDROLLO</option>
+              <option value="HONDA">HONDA</option>
+              <option value="HANWO">HANWO</option>
+              <option value="GENERAC">GENERAC</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <select class="filter-select" id="appFilter">
+              <option value="">Todas las aplicaciones</option>
+              <option value="Industrial">Industrial</option>
+              <option value="Comercial">Comercial</option>
+              <option value="Residencial">Residencial</option>
+              <option value="Agrícola">Agrícola</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="category-chips">
+          <div class="cat-chip active" data-cat="all">Todos los Equipos</div>
+          <div class="cat-chip" data-cat="bombas-superficie">Bombas de Superficie</div>
+          <div class="cat-chip" data-cat="bombas-sumergibles">Bombas Sumergibles</div>
+          <div class="cat-chip" data-cat="motores">Motores Eléctricos</div>
+          <div class="cat-chip" data-cat="generadores">Generadores y Energía</div>
+          <div class="cat-chip" data-cat="tanques">Tanques de Presión</div>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid" data-aos="fade-up">
+        </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="p-4 p-sm-5 bg-white rounded-4 shadow-md border border-light">
+            <h3 class="mb-2">Envíanos un mensaje</h3>
+            <p class="text-muted mb-4">Completa el formulario y un ingeniero experto te responderá de inmediato.</p>
+            <form action="https://formsubmit.co/heyditennetzuniga03@gmail.com" method="POST">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="form-label small fw-bold">Nombre Completo *</label>
+                  <input type="text" name="name" class="form-control" required placeholder="Ej: Ing. Carlos Mendoza" />
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label small fw-bold">Correo Electrónico *</label>
+                  <input type="email" name="email" class="form-control" required placeholder="Ej: carlos@empresa.com" />
+                </div>
+                <div class="col-12">
+                  <label class="form-label small fw-bold">Mensaje / Requerimiento Técnico *</label>
+                  <textarea name="message" rows="4" class="form-control" required placeholder="Escribe detalladamente el tipo de bomba o equipo que necesitas..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary-industrial w-100 style-padding">
+                    <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="contact-info-card" data-aos="fade-left">
+            <h4>Información de contacto</h4>
+            <div class="info-row">
+              <i class="fas fa-phone-volume"></i>
+              <div>
+                <h6>Teléfono Casa Matriz</h6>
+                <p><a href="tel:+5045566614" style="color: inherit;">+504 556-6614</a></p>
+              </div>
+            </div>
+            <div class="info-row">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <h6>WhatsApp Comercial</h6>
+                <p><a href="https://wa.me/50497223433" target="_blank" rel="noopener" style="color: inherit;">+504 9722-3433</a></p>
+              </div>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h6>Correo Electrónico</h6>
+                <p><a href="mailto:heyditennetzuniga03@gmail.com" style="color: inherit;">heyditennetzuniga03@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-globe"></i>
+              <div>
+                <h6>Sitio Web Oficial</h6>
+                <p>www.bomohsa.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote-overlay" id="quoteOverlay" onclick="toggleQuotePanel()"></div>
+  <div class="quote-panel" id="quotePanel">
+    <div class="quote-header">
+      <h5><i class="fas fa-file-invoice-dollar"></i> Mi Cotización</h5>
+      <button class="quote-close" onclick="toggleQuotePanel()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="quote-body" id="quoteBody">
+      </div>
+    <div class="quote-footer">
+      <div class="quote-total-row">
+        <span>Total Est.:</span>
+        <span id="quoteTotal">L. 0.00</span>
+      </div>
+      <button class="btn btn-whatsapp w-100 justify-content-center" onclick="sendQuoteWhatsApp()">
+        <i class="fab fa-whatsapp"></i> Enviar a WhatsApp Comercial
+      </button>
+    </div>
+  </div>
+
+  <a id="waFloat" class="whatsapp-float" target="_blank" rel="noopener" href="https://wa.me/50497223433?text=Hola%20BOMOHSA%2C%20solicito%20asesor%C3%ADa%20para%20un%20proyecto%20de%20bombeo.">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100;">
+    <div id="cartToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="toastMessage">Producto añadido correctamente.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    // Inicialización de Animaciones
+    AOS.init({ once: true });
+
+    // Base de datos de productos rectificada con imágenes industriales correspondientes
+    const productsDB = [
+      {
+        id: 'p1',
+        name: 'Bomba Centrífuga Monobloc Goulds 3656',
+        brand: 'GOULDS',
+        category: 'bombas-superficie',
+        price: 24500,
+        priceText: 'L. 24,500',
+        hp: '5.0',
+        applications: ['Industrial', 'Comercial'],
+        image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80', // Imagen industrial de maquinaria de bombeo pesada
+        description: 'Diseño monobloc de alta eficiencia para suministro de agua continuo, transferencia de fluidos y sistemas de enfriamiento industrial.',
+        stock: 'En stock'
+      },
+      {
+        id: 'p2',
+        name: 'Bomba Sumergible de Pozo Profundo Pearl 4"',
+        brand: 'PEARL',
+        category: 'bombas-sumergibles',
+        price: 18900,
+        priceText: 'L. 18,900',
+        hp: '2.0',
+        applications: ['Agrícola', 'Residencial'],
+        image: 'https://images.unsplash.com/photo-1542332606-b4d19f7f858a?w=600&q=80', // Estructura de tubería/pozo y control de agua limpia
+        description: 'Construcción íntegra en acero inoxidable. Excelente resistencia a la arena. Ideal para pozos profundos residenciales y riego agrícola.',
+        stock: 'En stock'
+      },
+      {
+        id: 'p3',
+        name: 'Motor Eléctrico Franklin Trifásico Premium',
+        brand: 'FRANKLIN ELECTRIC',
+        category: 'motores',
+        price: 15400,
+        priceText: 'L. 15,400',
+        hp: '7.5',
+        applications: ['Industrial'],
+        image: 'https://images.unsplash.com/photo-1620283085439-39620a1e21c4?w=600&q=80', // Componentes de motor industrial y bobinados eléctricos de alta calidad
+        description: 'Motor industrial de alta eficiencia y torque constante. Aislamiento clase F, protección IP55. Diseñado para trabajo continuo severo.',
+        stock: 'En stock'
+      },
+      {
+        id: 'p4',
+        name: 'Generador a Gasolina Generac GP3300',
+        brand: 'GENERAC',
+        category: 'generadores',
+        price: 21900,
+        priceText: 'L. 21,900',
+        hp: '6.5',
+        applications: ['Comercial', 'Residencial'],
+        image: 'https://images.unsplash.com/photo-1590005354167-6da97870c913?w=600&q=80', // Generador y planta de potencia eléctrica portátil
+        description: 'Planta de energía portátil confiable con tecnología PowerRush que proporciona hasta un 40% más de capacidad de arranque en picos exigentes.',
+        stock: 'En stock'
+      },
+      {
+        id: 'p5',
+        name: 'Tanque Hidroneumático Vertical Pearl 80 Gal',
+        brand: 'PEARL',
+        category: 'tanques',
+        price: 12500,
+        priceText: 'L. 12,500',
+        hp: '-',
+        applications: ['Residencial', 'Comercial'],
+        image: 'https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=600&q=80', // Tanques cilíndricos y sistemas de almacenamiento presurizados
+        description: 'Tanque de presión precargado de diafragma de alta resistencia. Pintura epóxica horneada para máxima durabilidad contra la corrosión.',
+        stock: 'En stock'
+      }
+    ];
+
+    let quoteCart = [];
+
+    // Renderizar Productos en la Interfaz
+    function renderProducts() {
+      const grid = document.getElementById('productsGrid');
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const brand = document.getElementById('brandFilter').value;
+      const app = document.getElementById('appFilter').value;
+      const activeCat = document.querySelector('.cat-chip.active').dataset.cat;
+
+      const filtered = productsDB.filter(p => {
+        const matchesSearch = p.name.toLowerCase().includes(search) || p.brand.toLowerCase().includes(search);
+        const matchesBrand = brand === '' || p.brand === brand;
+        const matchesApp = app === '' || p.applications.includes(app);
+        const matchesCat = activeCat === 'all' || p.category === activeCat;
+        return matchesSearch && matchesBrand && matchesApp && matchesCat;
+      });
+
+      if(filtered.length === 0) {
+        grid.innerHTML = '<div class="col-12 text-center text-muted py-5"><i class="fas fa-search mb-3 display-6"></i><h6>No se encontraron equipos bajo estos filtros.</h6></div>';
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => `
+        <div class="product-card">
+          <div class="product-img">
+            <img src="${p.image}" alt="${p.name}" />
+            <span class="product-stock in-stock">${p.stock}</span>
+          </div>
+          <div class="product-body">
+            <span class="product-brand">${p.brand}</span>
+            <h5 class="product-name">${p.name}</h5>
+            <p class="product-desc">${p.description}</p>
+            <div class="product-meta">
+              <span><i class="fas fa-bolt"></i> ${p.hp} HP</span>
+              <span><i class="fas fa-industry"></i> ${p.applications[0]}</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">${p.priceText}</span>
+              <div class="product-actions">
+                <button class="btn btn-sm btn-primary-industrial" onclick="addToQuote('${p.id}')" title="Agregar a la cotización">
+                  <i class="fas fa-plus"></i> Añadir
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Manejo de Chips de Categoría
+    document.querySelectorAll('.cat-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.cat-chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        renderProducts();
+      });
+    });
+
+    // Eventos de Filtros
+    document.getElementById('searchInput').addEventListener('input', renderProducts);
+    document.getElementById('brandFilter').addEventListener('change', renderProducts);
+    document.getElementById('appFilter').addEventListener('change', renderProducts);
+
+    // Funciones del Carrito/Cotizador
+    function toggleQuotePanel() {
+      document.getElementById('quotePanel').classList.toggle('open');
+      document.getElementById('quoteOverlay').classList.toggle('open');
+    }
+
+    function addToQuote(id) {
+      const prod = productsDB.find(p => p.id === id);
+      const exists = quoteCart.find(item => item.id === id);
+
+      if (exists) {
+        exists.qty += 1;
+      } else {
+        quoteCart.push({ ...prod, qty: 1 });
+      }
+
+      updateCart();
+      
+      const toast = new bootstrap.Toast(document.getElementById('cartToast'));
+      document.getElementById('toastMessage').innerText = `"${prod.name}" agregado a su cotización.`;
+      toast.show();
+    }
+
+    function changeQty(id, amount) {
+      const item = quoteCart.find(i => i.id === id);
+      if(item) {
+        item.qty += amount;
+        if(item.qty <= 0) {
+          quoteCart = quoteCart.filter(i => i.id !== id);
+        }
+      }
+      updateCart();
+    }
+
+    function updateCart() {
+      const badge = document.getElementById('cartBadge');
+      const body = document.getElementById('quoteBody');
+      const totalEl = document.getElementById('quoteTotal');
+      
+      const totalItems = quoteCart.reduce((acc, i) => acc + i.qty, 0);
+      badge.innerText = totalItems;
+
+      if(quoteCart.length === 0) {
+        body.innerHTML = `
+          <div class="quote-empty">
+            <i class="fas fa-clipboard-list"></i>
+            <h6>Tu cotización está vacía</h6>
+            <p>Agrega productos del catálogo para solicitar tu cotización formal.</p>
+          </div>`;
+        totalEl.innerText = 'L. 0.00';
+        return;
+      }
+
+      let totalEst = 0;
+      body.innerHTML = quoteCart.map(item => {
+        totalEst += (item.price * item.qty);
+        return `
+          <div class="quote-item">
+            <img src="${item.image}" alt="${item.name}">
+            <div class="quote-item-info">
+              <span class="quote-item-brand">${item.brand}</span>
+              <h6>${item.name}</h6>
+              <div class="quote-item-bottom">
+                <div class="qty-control">
+                  <button onclick="changeQty('${item.id}', -1)">-</button>
+                  <span class="qty-val">${item.qty}</span>
+                  <button onclick="changeQty('${item.id}', 1)">+</button>
+                </div>
+                <span class="quote-item-price">${item.priceText}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      totalEl.innerText = 'L. ' + totalEst.toLocaleString('es-HN');
+    }
+
+    // Enviar Cotización Estructurada hacia WhatsApp
+    function sendQuoteWhatsApp() {
+      if(quoteCart.length === 0) return alert('Agregue productos antes de enviar.');
+
+      let msg = `📋 *SOLICITUD DE COTIZACIÓN - BOMOHSA*\n`;
+      msg += `━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+      
+      quoteCart.forEach((item, idx) => {
+        msg += `*${idx + 1}. ${item.name}*\n`;
+        msg += `   • Marca: ${item.brand}\n`;
+        msg += `   • Cantidad: ${item.qty}\n`;
+        msg += `   • Ref. unitaria: ${item.priceText}\n\n`;
+      });
+
+      msg += `━━━━━━━━━━━━━━━━━━━━━━\n`;
+      msg += `📲 *Contacto para seguimiento:* heyditennetzuniga03@gmail.com\n\n`;
+      msg += `Por favor, un ingeniero regional envíeme la cotización formal con sus respectivas hojas técnicas de rendimiento.`;
+
+      const url = `https://wa.me/50497223433?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    }
+
+    // Carga inicial de elementos
+    renderProducts();
+  </script>
+</body>
+</html>
